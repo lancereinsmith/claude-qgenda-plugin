@@ -1,0 +1,15 @@
+services:
+  qgenda-mcp:
+    build: .
+    ports:
+      - "${MCP_PORT:-8000}:${MCP_PORT:-8000}"
+    environment:
+      - MCP_PORT=${MCP_PORT:-8000}
+      - QGENDA_CONF_FILE=/run/secrets/qgenda_conf
+    secrets:
+      - qgenda_conf
+    restart: unless-stopped
+
+secrets:
+  qgenda_conf:
+    file: ${QGENDA_CONF_FILE:-~/.qgenda.conf}

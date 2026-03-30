@@ -1,0 +1,11 @@
+#!/bin/sh
+# Sync version from pyproject.toml into .claude-plugin/plugin.json before commit.
+
+version=$(grep '^version' pyproject.toml | head -1 | sed 's/.*"\(.*\)"/\1/')
+current=$(grep '"version"' .claude-plugin/plugin.json 2>/dev/null | sed 's/.*"\([0-9][^"]*\)".*/\1/')
+
+if [ "$version" != "$current" ]; then
+    sed -i '' "s/\"version\": \".*\"/\"version\": \"$version\"/" .claude-plugin/plugin.json
+    git add .claude-plugin/plugin.json
+    echo "pre-commit: synced plugin.json version to $version"
+fi

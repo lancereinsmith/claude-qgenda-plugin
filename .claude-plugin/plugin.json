@@ -1,0 +1,11 @@
+{
+  "name": "qgenda",
+  "version": "0.1.0",
+  "description": "Query QGenda scheduling system for physician schedules, staff, shifts, requests, rotations, and more.",
+  "author": {
+    "name": "Lance Reinsmith"
+  },
+  "repository": "https://github.com/lancereinsmith/claude-qgenda-plugin",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json"
+}

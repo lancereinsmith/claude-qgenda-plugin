@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "qgenda": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/lancereinsmith/claude-qgenda-plugin",
+        "claude-qgenda-plugin"
+      ]
+    }
+  }
+}

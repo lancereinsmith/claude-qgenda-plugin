@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-qgenda-plugin",
+  "owner": {
+    "name": "Lance Reinsmith"
+  },
+  "plugins": [
+    {
+      "name": "qgenda",
+      "description": "Query QGenda scheduling system for physician schedules, staff, shifts, requests, rotations, and more.",
+      "source": "./",
+      "category": "productivity",
+      "license": "MIT",
+      "keywords": ["qgenda", "scheduling", "healthcare"]
+    }
+  ]
+}
